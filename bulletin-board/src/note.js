@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import FaPencil from 'react-icons/lib/fa/pencil'
-import FaPencil from 'react-icons/lib/fa/trash'
+import FaTrash from 'react-icons/lib/fa/trash'
 
 class Note extends React.Component {
     constructor(props){
