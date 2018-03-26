@@ -1,9 +1,9 @@
 import React, { Component } from 'react'
 import FaPencil from 'react-icons/lib/fa/pencil'
 import FaTrash from 'react-icons/lib/fa/trash'
-import FaFloppy0 from 'react-icons/lib/fa/Floppy-0'
+import FaFloppyO from 'react-icons/lib/fa/floppy-o'
 
-class Note extends React.Component {
+class Note extends Component {
     constructor(props){
         super(props)
         this.state = {
@@ -39,14 +39,12 @@ class Note extends React.Component {
         <div className="note">
            <form> 
             <text area /> 
-                <button onClick = {this.save} ><FaFloppy0 /></button>
+                <button onClick = {this.save} ><FaFloppyO /></button>
             </form>
         </div>
         )
     }
 
-
-    
     renderDisplay() {
         return (
             <div className="note">
@@ -61,13 +59,9 @@ class Note extends React.Component {
     }
 
     render() {
-		if(this.state.editing){
-            return this.render.form()
-        } else {
-            return this.renderDisplay()
-        }
+		return this.state.editing ? this.renderForm() : this.renderDisplay()
 	}
 
-
+}
 
 export default Note
